@@ -3,7 +3,7 @@
   <title>原理</title>
   
   <subtitle>莫忘初衷，體驗現實，學海無涯，回頭是岸。</subtitle>
-  <link href="/blog/atom.xml" rel="self"/>
+  <link href="/cblog/atom.xml" rel="self"/>
   
   <link href="https://daoprinciple.github.io/cblog/"/>
   <updated>2020-07-27T14:29:54.606Z</updated>
@@ -167,9 +167,9 @@
       <category term="reading" scheme="https://daoprinciple.github.io/cblog/categories/reading/"/>
     
     
-      <category term="雜學" scheme="https://daoprinciple.github.io/cblog/tags/%E9%9B%9C%E5%AD%B8/"/>
-    
       <category term="生活" scheme="https://daoprinciple.github.io/cblog/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+      <category term="雜學" scheme="https://daoprinciple.github.io/cblog/tags/%E9%9B%9C%E5%AD%B8/"/>
     
       <category term="態度" scheme="https://daoprinciple.github.io/cblog/tags/%E6%85%8B%E5%BA%A6/"/>
     
@@ -252,9 +252,9 @@
       <category term="閱讀" scheme="https://daoprinciple.github.io/cblog/categories/%E9%96%B1%E8%AE%80/"/>
     
     
-      <category term="雜學" scheme="https://daoprinciple.github.io/cblog/tags/%E9%9B%9C%E5%AD%B8/"/>
-    
       <category term="生活" scheme="https://daoprinciple.github.io/cblog/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+      <category term="雜學" scheme="https://daoprinciple.github.io/cblog/tags/%E9%9B%9C%E5%AD%B8/"/>
     
       <category term="態度" scheme="https://daoprinciple.github.io/cblog/tags/%E6%85%8B%E5%BA%A6/"/>
     
@@ -279,9 +279,9 @@
       <category term="閱讀" scheme="https://daoprinciple.github.io/cblog/categories/%E9%96%B1%E8%AE%80/"/>
     
     
-      <category term="雜學" scheme="https://daoprinciple.github.io/cblog/tags/%E9%9B%9C%E5%AD%B8/"/>
-    
       <category term="生活" scheme="https://daoprinciple.github.io/cblog/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+      <category term="雜學" scheme="https://daoprinciple.github.io/cblog/tags/%E9%9B%9C%E5%AD%B8/"/>
     
   </entry>
   
@@ -432,11 +432,11 @@
       <category term="閱讀" scheme="https://daoprinciple.github.io/cblog/categories/%E9%96%B1%E8%AE%80/"/>
     
     
-      <category term="雜學" scheme="https://daoprinciple.github.io/cblog/tags/%E9%9B%9C%E5%AD%B8/"/>
-    
       <category term="health" scheme="https://daoprinciple.github.io/cblog/tags/health/"/>
     
       <category term="生活" scheme="https://daoprinciple.github.io/cblog/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+      <category term="雜學" scheme="https://daoprinciple.github.io/cblog/tags/%E9%9B%9C%E5%AD%B8/"/>
     
   </entry>
   
@@ -459,11 +459,11 @@
       <category term="閱讀" scheme="https://daoprinciple.github.io/cblog/categories/%E9%96%B1%E8%AE%80/"/>
     
     
-      <category term="雜學" scheme="https://daoprinciple.github.io/cblog/tags/%E9%9B%9C%E5%AD%B8/"/>
-    
       <category term="health" scheme="https://daoprinciple.github.io/cblog/tags/health/"/>
     
       <category term="生活" scheme="https://daoprinciple.github.io/cblog/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+      <category term="雜學" scheme="https://daoprinciple.github.io/cblog/tags/%E9%9B%9C%E5%AD%B8/"/>
     
   </entry>
   
@@ -536,11 +536,11 @@
       <category term="閱讀" scheme="https://daoprinciple.github.io/cblog/categories/%E9%96%B1%E8%AE%80/"/>
     
     
-      <category term="雜學" scheme="https://daoprinciple.github.io/cblog/tags/%E9%9B%9C%E5%AD%B8/"/>
-    
       <category term="health" scheme="https://daoprinciple.github.io/cblog/tags/health/"/>
     
       <category term="生活" scheme="https://daoprinciple.github.io/cblog/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+      <category term="雜學" scheme="https://daoprinciple.github.io/cblog/tags/%E9%9B%9C%E5%AD%B8/"/>
     
   </entry>
   
