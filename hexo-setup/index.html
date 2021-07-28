@@ -1,0 +1,1447 @@
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next mist" lang="zh-TW">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112067100-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-112067100-2');
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Arial:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/blog/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/blog/css/main.css?v=6.0.6" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png?v=6.0.6">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png?v=6.0.6">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png?v=6.0.6">
+
+
+  <link rel="mask-icon" href="/blog/images/logo.svg?v=6.0.6" color="#222">
+
+
+  <link rel="manifest" href="/blog/images/manifest.json">
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/blog/',
+    scheme: 'Mist',
+    version: '6.0.6',
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="可以直接看最後面的murmur… 一份安裝過程紀錄，並把安裝過程分享給大家。本身是物理出生而不是CS，只好摸索該怎麼架站並記錄下來。會選用Hexo+github的原因是原本用在Blogger實在是讓人不爽，為什麼不能直接遠端上傳markdown文件阿！我需要的文件只需要markdown，但Blogger弄很多複雜的東西有點令人感到不爽（當然也是很方便拉），也因此在因緣際會底下就開始使用了這個台製的">
+<meta name="keywords" content="hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo + Github 安裝大補帖">
+<meta property="og:url" content="https://daoprinciple.github.io/cblog/hexo-setup/index.html">
+<meta property="og:site_name" content="原理">
+<meta property="og:description" content="可以直接看最後面的murmur… 一份安裝過程紀錄，並把安裝過程分享給大家。本身是物理出生而不是CS，只好摸索該怎麼架站並記錄下來。會選用Hexo+github的原因是原本用在Blogger實在是讓人不爽，為什麼不能直接遠端上傳markdown文件阿！我需要的文件只需要markdown，但Blogger弄很多複雜的東西有點令人感到不爽（當然也是很方便拉），也因此在因緣際會底下就開始使用了這個台製的">
+<meta property="og:locale" content="zh-TW">
+<meta property="og:updated_time" content="2018-03-28T02:00:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo + Github 安裝大補帖">
+<meta name="twitter:description" content="可以直接看最後面的murmur… 一份安裝過程紀錄，並把安裝過程分享給大家。本身是物理出生而不是CS，只好摸索該怎麼架站並記錄下來。會選用Hexo+github的原因是原本用在Blogger實在是讓人不爽，為什麼不能直接遠端上傳markdown文件阿！我需要的文件只需要markdown，但Blogger弄很多複雜的東西有點令人感到不爽（當然也是很方便拉），也因此在因緣際會底下就開始使用了這個台製的">
+
+
+
+  <link rel="alternate" href="/blog/atom.xml" title="原理" type="application/atom+xml">
+
+
+
+
+  <link rel="canonical" href="https://daoprinciple.github.io/cblog/hexo-setup/">
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Hexo + Github 安裝大補帖 | 原理</title>
+  
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112067100-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-112067100-2');
+</script>
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-TW">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> 
+
+<div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/blog/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">原理</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">莫忘初衷，體驗現實，學海無涯，回頭是岸。</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切換導航欄">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+          
+  <li class="menu-item menu-item-about">
+    <a href="/blog/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br>關於</a>
+</li>
+
+      
+        
+        
+          
+  <li class="menu-item menu-item-tags">
+    <a href="/blog/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>標籤</a>
+</li>
+
+      
+        
+        
+          
+  <li class="menu-item menu-item-studylist">
+    <a href="/blog/studylist/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-book"></i> <br>studylist</a>
+</li>
+
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜尋</a>
+        </li>
+      
+    </ul>
+  
+
+  
+    
+
+    
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+    
+
+  
+
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜尋..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+  
+
+
+
+ </div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://daoprinciple.github.io/cblog/blog/hexo-setup/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zazart Tsai">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/blog/images/zazartsai2.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="原理">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Hexo + Github 安裝大補帖</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2017-09-09T10:21:32+08:00">2017-09-09</time>
+            
+
+            
+            
+              
+                
+              
+            
+
+            
+              
+              <span class="post-meta-divider">|</span>
+              
+
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+              <time title="更新於" itemprop="dateModified" datetime="2018-03-28T10:00:00+08:00">2018-03-28</time>
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/computer/" itemprop="url" rel="index"><span itemprop="name">computer</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/blog/hexo-setup/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="hexo-setup/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                <span title="文章字數">8k</span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>可以直接看最後面的murmur…</p>
+<p>一份安裝過程紀錄，並把安裝過程分享給大家。本身是物理出生而不是CS，只好摸索該怎麼架站並記錄下來。會選用Hexo+github的原因是原本用在Blogger實在是讓人不爽，為什麼不能直接遠端上傳markdown文件阿！我需要的文件只需要markdown，但Blogger弄很多複雜的東西有點令人感到不爽（當然也是很方便拉），也因此在因緣際會底下就開始使用了這個<strong>台製的Hexo架構</strong><sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>，試用了兩個月發現其實還不賴！就算是整個站掛點還是可以很快速的救回來！</p>
+<a id="more"></a>
+<h2 id="平常使用有多簡單？"><a class="header-anchor" href="#平常使用有多簡單？">¶</a>平常使用有多簡單？</h2>
+<p><s>為了使大家能夠入坑</s>，說明一下平常文章發佈跟寫作到底需要哪些指令呢？<strong>就4+1個指令</strong>，<s>跟簽五年碩士一樣</s>，是不是真的很簡單呢？ <sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup> <s>如果遇到要debug真的是痛苦到讓人想要殺人</s></p>
+<h3 id="四步驟的部屬指令"><a class="header-anchor" href="#四步驟的部屬指令">¶</a>四步驟的部屬指令</h3>
+<p><code>$hexo g(generate)</code> 產生靜態檔案<br>
+<code>$hexo s(sever)</code> 在local運行網誌（不一定要先產生靜態檔案也可以）<br>
+<code>$hexo d(deploy)</code> 部屬至github(或是其他地方)<br>
+<code>$hexo clean</code> 清除靜態檔案</p>
+<h3 id="一步驟產生新文章"><a class="header-anchor" href="#一步驟產生新文章">¶</a>一步驟產生新文章</h3>
+<p><code>$hexo new [預設格式(選擇性)] &lt;標題&gt;</code></p>
+<p>這樣，有覺得心動想要繼續看下去吧XD</p>
+<p>先看看作者<strong>Tommy Chen<sup class="footnote-ref"><a href="#fn1" id="fnref1:1">[1]</a></sup></strong> 發展這個架構的心得吧！</p>
+<p><a href="https://zespia.tw/blog/2012/10/11/hexo-debut/" target="_blank" rel="noopener">Hexo 颯爽登場</a></p>
+<h2 id="下載與安裝基本配置"><a class="header-anchor" href="#下載與安裝基本配置">¶</a>下載與安裝基本配置</h2>
+<p>本篇安裝過程以<strong>fedora27</strong>爲範本作為安裝程序。其他安裝詳情可以查閱[官方文件][Hexo-docs]與其他神手的心得<sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup>。</p>
+<h3 id="必備程式-這兩個應該是不會玩到壞掉拉"><a class="header-anchor" href="#必備程式-這兩個應該是不會玩到壞掉拉">¶</a>必備程式（這兩個應該是不會玩到壞掉拉…）</h3>
+<ul>
+<li>
+<p>利用Wget安裝Nodejs<br>
+<code>wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash</code><br>
+一旦安裝完成，重啟終端機並執行下列指令以安裝 Node.js與npm<sup class="footnote-ref"><a href="#fn4" id="fnref4">[4]</a></sup>。<br>
+<code>nvm install stable</code></p>
+</li>
+<li>
+<p>Git<br>
+<code>sudo dnf install git-core</code></p>
+</li>
+</ul>
+<h3 id="安裝hexo"><a class="header-anchor" href="#安裝hexo">¶</a>安裝hexo</h3>
+<p>透過 npm 安裝 Hexo<br>
+<code>npm install -g hexo-cli</code></p>
+<h3 id="建立專案-你的blog資料夾"><a class="header-anchor" href="#建立專案-你的blog資料夾">¶</a>建立專案（你的blog資料夾）</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init &lt;folder&gt;</span><br><span class="line">cd &lt;folder&gt;</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<p>到上面為止基本上架構就完成了</p>
+<hr>
+<h2 id="調校整理"><a class="header-anchor" href="#調校整理">¶</a>調校整理</h2>
+<h3 id="外掛安裝方式"><a class="header-anchor" href="#外掛安裝方式">¶</a>外掛安裝方式</h3>
+<p>由於Hexo是一個掛在npm底下的一隻程式（應該是可以這樣理解），也因此有很多大神幫忙製作了許多好用的插件（外掛）在Hexo上，有需要的話就參考看看吧，這是個人常用的一些外掛。</p>
+<p>外掛安裝方式請在自己的blog子資料夾中開始以下的動作。<br>
+<code>npm install [外掛名稱]</code><br>
+或者是簡潔一點<br>
+<code>npm i [外掛名稱]</code></p>
+<p>下面這個加了<code>-g</code>的是全域安裝。沒有global的就是只有在目標資料夾底下安裝所需的package。<br>
+<code>npm i -g</code></p>
+<h4 id="外掛"><a class="header-anchor" href="#外掛">¶</a>外掛</h4>
+<p>大部分的外掛都可以在<a href="%22https://hexo.io/plugins/%22">官方外掛頁面</a>上查詢到。可以查看<strong>我的另外一篇網誌。</strong> 這裏只有說明要怎麼順利將網誌上傳至Github</p>
+<ul>
+<li>
+<p>[hexo-deployer-git][deployer-git]</p>
+<p>為了守護github，讓你的資料能夠正常的放到github上，這個東西「必裝」。除了安裝這個外掛外，在Github上也需要增加SSH Key才能讓通訊協定達成。有需要可以看[github-ssh說明文件][github-ssh]，或是參考下面Github的部份</p>
+</li>
+</ul>
+<p>個人在_config.yml中的設置如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:zerothtest/.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<h3 id="順利上傳網誌至github"><a class="header-anchor" href="#順利上傳網誌至github">¶</a>順利上傳網誌至Github</h3>
+<ol start="0">
+<li>看你的電腦裡面有沒有鑰匙<br>
+<code>ls -al ~/.ssh</code><br>
+如果有如同下列這些的檔案，那就可以跳到步驟3.</li>
+</ol>
+<blockquote>
+<p>id_dsa.pub<br>
+id_ecdsa.pub<br>
+id_ed25519.pub<br>
+id_rsa.pub</p>
+</blockquote>
+<ol>
+<li>安裝ssh-keygen<br>
+<code>sudo dnf install ssh-keygen</code></li>
+<li>在終端上產生新的key<br>
+<code>ssh-keygen -t rsa -b 4096 -C &quot;your_email@example.com&quot;</code></li>
+<li>將ssh鑰匙加到ssh-agent<br>
+背景執行ssh-agent<br>
+<code>eval &quot;$(ssh-agent -s)&quot;</code><br>
+將私人SSH鑰匙加入ssh-agent，注意檔名。<br>
+<code>ssh-add ~/.ssh/id_rsa</code></li>
+<li>複製貼上<br>
+超強複製貼上神器（其實我第一次見到它是在github的說明文件…，不過蠻好用的）<br>
+<code>sudo dnf install xclip</code><br>
+複製你的鑰匙吧，貼到Settings -&gt; SSH and GPG keys -&gt; New SSH key 上面<br>
+<code>xclip -sel clip &lt; ~/.ssh/id_rsa.pub</code></li>
+<li>check<br>
+<code>ssh -T git@github.com</code><br>
+基本上順著這個流程走應該是沒問題，個人沒有碰到什麼奇怪事</li>
+</ol>
+<h2 id="npm-砍掉重練"><a class="header-anchor" href="#npm-砍掉重練">¶</a>npm 砍掉重練</h2>
+<p>基本上就是把node_modules整個砍掉就是了<sup class="footnote-ref"><a href="#fn5" id="fnref5">[5]</a></sup>，好孩子沒事不要學。</p>
+<p><code>npm ls -gp --depth=0 | awk -F/ '/node_modules/ &amp;&amp; !/\/npm$/ {print $NF}' | xargs npm -g rm</code></p>
+<h2 id="murmur"><a class="header-anchor" href="#murmur">¶</a>Murmur…</h2>
+<p>這個Blog主要規劃拿來寫讀書心得跟學習筆記，但要自己DIY弄網誌，就必須要學會基本的語法設定，所以一開始不得不寫電腦相關的技術文章。寫紀錄，除了花費大量時間撰寫相較來說是缺點外，建立自己的知識庫與未來若發生問題，可以有跡可循（就跟寫實驗紀錄一樣拉），這也是寫文章的原因。</p>
+<p>之前，Hexo架設幾乎就是整個砍掉重練大概花了一個早上的時間（其實只有兩個小時剩下時間都在摸魚…），用hexo+github，可以在短時間內把玩爛掉的網站直接重新架設好，真的很感謝，打文件花的時間似乎跟安裝一樣，不要小看短短的一篇文章，越是清晰有架構的解釋文，網路上的大神所花費的時間就越多，真的很佩服大神們願意無條件的分享自己的學習經驗在網路上阿。</p>
+<p>這樣什麼時候開始打天文物理相關的文章呢…</p>
+<h3 id="murmur2-2018-03-27新增"><a class="header-anchor" href="#murmur2-2018-03-27新增">¶</a>Murmur2 2018.03.27新增</h3>
+<p>前幾天想要安裝markdown-it的時候又爆炸，實在是哭不出來。對於不是走網頁前後端的人來說，使用這個系統還是有些吃力（當然如果要無腦使用是不需要花費這麼多經歷拉，無腦架設網誌，應該也不會選擇用Hexo就是XD）。原本想說NEXT從此就爆炸不能用了，沒想到應該是我安裝某些套件使得相容性產生問題。最近一直在修復這些問題，還在努力中。希望可以趕快把這個平臺架設起來！另外，要記得一件很重要的事-<strong>記得備份</strong></p>
+<h3 id="hexo與其他類似管理系統比較"><a class="header-anchor" href="#hexo與其他類似管理系統比較">¶</a>Hexo與其他類似管理系統比較</h3>
+<p><a href="https://www.techiediaries.com/jekyll-hugo-hexo/" target="_blank" rel="noopener">Techiediaries - How to Choose the Right Static Generator: Jekyll vs. Hugo vs. Hexo</a></p>
+<p><a href="http://selfboot.cn/2014/11/30/jekyll_to_hexo/" target="_blank" rel="noopener">Segmentfault - 更換博客系統——從jekyll到hexo</a></p>
+<p>P.S. 根據上面的比較，Hexo是很有發展潛力的一種部落格框架，並且他唯一的缺點是缺少英文文件的支援（我似乎可以把文件改成英文的阿哈哈哈XDDD）. I’ll try to rewrite this page into English instead of Mandarin/Chinese.</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p><a href="https://github.com/tommy351" target="_blank" rel="noopener">Github-Tommy Chen</a>; <a href="https://zespia.tw/" target="_blank" rel="noopener">https://zespia.tw/</a> <a href="#fnref1" class="footnote-backref">↩</a> <a href="#fnref1:1" class="footnote-backref">↩</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p><a href="http://hexo.io/zh-tw/docs/commands.html" target="_blank" rel="noopener">官方指令說明</a> <a href="#fnref2" class="footnote-backref">↩</a></p>
+</li>
+<li id="fn3" class="footnote-item"><p><a href="https://linghucong.js.org/2016/04/15/2016-04-15-hexo-github-pages-blog/" target="_blank" rel="noopener">令狐葱的前端筆記</a> <a href="#fnref3" class="footnote-backref">↩</a></p>
+</li>
+<li id="fn4" class="footnote-item"><p><a href="http://www.cc.ntu.edu.tw/chinese/epaper/0034/20150920_3409.html" target="_blank" rel="noopener">台大計中-利用NPM快速建置Node.js網路應用框架</a>;<a href="https://www.openfoundry.org/tw/tech-column/8537-npm-node-package-manager" target="_blank" rel="noopener">自由軟體鑄造場-什麼是npm?</a> <a href="#fnref4" class="footnote-backref">↩</a></p>
+</li>
+<li id="fn5" class="footnote-item"><p><a href="https://stackoverflow.com/questions/9283472/command-to-remove-all-npm-modules-globally" target="_blank" rel="noopener">StackFlow-command-to-remove-all-npm-modules-globally</a> <a href="#fnref5" class="footnote-backref">↩</a></p>
+</li>
+</ol>
+</section>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/blog/tags/hexo/" rel="tag"># hexo</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/blog/py-numpy/" rel="next" title="Python-numpy arrays 介紹">
+                <i class="fa fa-chevron-left"></i> Python-numpy arrays 介紹
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/blog/computer-firefox/" rel="prev" title="瀏覽器推薦 firefox(火狐)">
+                瀏覽器推薦 firefox(火狐) <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            本站概要
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/blog/images/zazartsai2.jpg" alt="Zazart Tsai">
+            
+              <p class="site-author-name" itemprop="name">Zazart Tsai</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/blog/archives">
+                
+                    <span class="site-state-item-count">43</span>
+                    <span class="site-state-item-name">文章</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/blog/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-name">分類</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/blog/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">26</span>
+                    <span class="site-state-item-name">標籤</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/blog/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+            <div class="cc-license motion-element" itemprop="license">
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank" rel="external nofollow">
+                <img src="/blog/images/cc-by-nc-sa.svg" alt="Creative Commons">
+              </a>
+            </div>
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#平常使用有多簡單？"><span class="nav-number">1.</span> <span class="nav-text">¶平常使用有多簡單？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#四步驟的部屬指令"><span class="nav-number">1.1.</span> <span class="nav-text">¶四步驟的部屬指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一步驟產生新文章"><span class="nav-number">1.2.</span> <span class="nav-text">¶一步驟產生新文章</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下載與安裝基本配置"><span class="nav-number">2.</span> <span class="nav-text">¶下載與安裝基本配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#必備程式-這兩個應該是不會玩到壞掉拉"><span class="nav-number">2.1.</span> <span class="nav-text">¶必備程式（這兩個應該是不會玩到壞掉拉…）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安裝hexo"><span class="nav-number">2.2.</span> <span class="nav-text">¶安裝hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#建立專案-你的blog資料夾"><span class="nav-number">2.3.</span> <span class="nav-text">¶建立專案（你的blog資料夾）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#調校整理"><span class="nav-number">3.</span> <span class="nav-text">¶調校整理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#外掛安裝方式"><span class="nav-number">3.1.</span> <span class="nav-text">¶外掛安裝方式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#外掛"><span class="nav-number">3.1.1.</span> <span class="nav-text">¶外掛</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#順利上傳網誌至github"><span class="nav-number">3.2.</span> <span class="nav-text">¶順利上傳網誌至Github</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#npm-砍掉重練"><span class="nav-number">4.</span> <span class="nav-text">¶npm 砍掉重練</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#murmur"><span class="nav-number">5.</span> <span class="nav-text">¶Murmur…</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#murmur2-2018-03-27新增"><span class="nav-number">5.1.</span> <span class="nav-text">¶Murmur2 2018.03.27新增</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo與其他類似管理系統比較"><span class="nav-number">5.2.</span> <span class="nav-text">¶Hexo與其他類似管理系統比較</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love" id="animate"> 
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Zazart Tsai</span>
+
+  
+
+  
+</div>
+
+
+  
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" rel="external nofollow" href="https://hexo.io">Hexo</a> 強力驅動</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主題 &mdash; <a class="theme-link" target="_blank" rel="external nofollow" href="https://github.com/theme-next/hexo-theme-next">NexT.Mist</a> v6.0.6</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/utils.js?v=6.0.6"></script>
+
+  <script type="text/javascript" src="/blog/js/src/motion.js?v=6.0.6"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/blog/js/src/scrollspy.js?v=6.0.6"></script>
+<script type="text/javascript" src="/blog/js/src/post-details.js?v=6.0.6"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/bootstrap.js?v=6.0.6"></script>
+
+
+
+  
+
+  
+    <script id="dsq-count-scr" src="https://daoprinciple.disqus.com/count.js" async></script>
+  
+
+  
+    <script type="text/javascript">
+      var disqus_config = function () {
+        this.page.url = 'https://daoprinciple.github.io/cblog/hexo-setup/';
+        this.page.identifier = 'hexo-setup/';
+        this.page.title = 'Hexo + Github 安裝大補帖';
+      };
+      function loadComments () {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://daoprinciple.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      }
+      
+        loadComments();
+      
+    </script>
+  
+
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/blog/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+    
+      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" type="text/css">
+
+   
+  
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
